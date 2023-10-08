@@ -1,0 +1,142 @@
+﻿
+#Image1 {
+    border-radius: 30px;
+    box-shadow: 12px 12px 22px;
+}
+
+.body {
+    background-size: contain;
+}
+
+.auto-style1 {
+    width: 100%;
+    height: 644px;
+}
+
+#Image2 {
+    border-radius: 30px;
+    box-shadow: 12px 12px 22px;
+}
+
+.auto-style3 {
+    width: 99%;
+    height: 458px;
+    background-color: #B4CFEC;
+    border-radius: 30px;
+    box-shadow: 12px 12px 22px;
+}
+
+.auto-style4 {
+    height: 23px;
+    width: 288px;
+}
+
+.auto-style5 {
+    text-align: center;
+    width: 252px;
+    height: 33px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 30px;
+}
+
+.auto-style6 {
+    width: 252px;
+}
+
+.auto-style7 {
+    height: 23px;
+    width: 252px;
+}
+
+.auto-style8 {
+    width: 288px;
+}
+
+.auto-style10 {
+    height: 23px;
+    width: 288px;
+    text-align: left;
+}
+
+.auto-style11 {
+    width: 288px;
+    text-align: right;
+}
+
+.auto-style12 {
+    width: 152px;
+    height: 30px;
+}
+
+.auto-style13 {
+    width: 263px;
+}
+
+.auto-style14 {
+    width: 288px;
+    height: 33px;
+}
+
+.auto-style15 {
+    width: 252px;
+    text-align: right;
+}
+
+.auto-style16 {
+    height: 50px;
+    width: 50%;
+    border: none;
+    outline: none;
+    border-radius: 60px;
+    font-weight: 600;
+    background-color: white;
+}
+
+.auto-style17 {
+    width: 365px;
+    height: 33px;
+}
+
+.auto-style19 {
+    height: 23px;
+    width: 365px;
+    text-align: left;
+}
+
+.auto-style20 {
+    width: 365px;
+    text-align: right;
+}
+
+.auto-style21 {
+    height: 23px;
+    width: 365px;
+}
+
+.auto-style22 {
+    width: 365px;
+}
+
+.auto-style23 {
+    width: 59px;
+}
+
+#Button1{
+    height: 50px;
+    width: 50%;
+    border: none;
+    outline: none;
+    border-radius: 60px;
+    font-weight: 600;
+    background-color: white;
+}
+
+#signup {
+    height: 50px;
+    width: 50%;
+    border: none;
+    outline: none;
+    border-radius: 60px;
+    font-weight: 600;
+    background-color: white;
+}
