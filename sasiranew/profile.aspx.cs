@@ -4,8 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.SqlClient;
+using sasiranew.App_Code.Services;
 
 namespace sasiranew
 {
@@ -13,53 +12,59 @@ namespace sasiranew
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //read data from session
-            userlabel.Text= Session["name"].ToString();
-             
-            //conection to retrive other data
-           SqlConnection con = new SqlConnection(conString);
-            con.Open();
-            SqlCommand cdm = new SqlCommand("select username, nic, email from stdregister where username=@username",con);
-            cdm.Parameters.AddWithValue("username",userlabel.Text);
-            SqlDataReader reader1;
-            reader1 = cdm.ExecuteReader();
-            if (reader1.Read())
+            if (IsPostBack)
             {
-                niclabel.Text = reader1["nic"].ToString();
-                emaillabel.Text = reader1["email"].ToString();
+                return;
             }
-            con.Close();
+
+            var username = Session["name"] as string;
+            userlabel.Text = username ?? string.Empty;
+
+            try
+            {
+                var service = new StudentAccountService();
+                var result = service.GetProfile(username);
+                if (!result.Succeeded)
+                {
+                    Label7.Text = result.ErrorMessage;
+                    Label7.ForeColor = System.Drawing.Color.Red;
+                    return;
+                }
+
+                niclabel.Text = result.Value.Nic ?? string.Empty;
+                emaillabel.Text = result.Value.Email ?? string.Empty;
+            }
+            catch
+            {
+                Label7.Text = "Something went wrong while loading the profile.";
+                Label7.ForeColor = System.Drawing.Color.Red;
+            }
 
 
         }
-        public string conString = "Data Source=DESKTOP-GHCHD6M;Initial Catalog=register;Integrated Security=True";
         protected void Button1_Click(object sender, EventArgs e)
         {
+            var username = Session["name"] as string;
 
-
-            SqlConnection con = new SqlConnection(conString);
-            SqlDataAdapter dsa = new SqlDataAdapter("select *from stdregister where password= '" + TextBox4.Text + "' ",con);
-            DataTable dt = new DataTable();
-            dsa.Fill(dt);
-            if (dt.Rows.Count.ToString() == "1")
-
+            try
             {
-                if (TextBox5.Text == TextBox6.Text)
+                var service = new StudentAccountService();
+                var result = service.ChangePassword(username, TextBox4.Text, TextBox5.Text, TextBox6.Text);
+                if (result.Succeeded)
                 {
-                    con.Open();
-                    SqlCommand cdm = new SqlCommand("Update stdregister set password='" + TextBox6.Text + "', confirmpass='"+TextBox6.Text+"'where password='" + TextBox4.Text + "'",con);
-                    cdm.ExecuteNonQuery();
-
-                    con.Close();
                     Label7.Text = "successful update";
                     Label7.ForeColor = System.Drawing.Color.Green;
-
-                 }
-
+                }
+                else
+                {
+                    Label7.Text = result.ErrorMessage;
+                    Label7.ForeColor = System.Drawing.Color.Red;
+                }
             }
-            else
+            catch
             {
-                Label7.Text = "please check your old password";
+                Label7.Text = "Something went wrong while changing the password.";
+                Label7.ForeColor = System.Drawing.Color.Red;
             }
        
            
