@@ -1,6 +1,6 @@
 using System;
 
-namespace sasiranew.App_Code.Models
+namespace sasiranew.Models
 {
     public sealed class StudentAccount
     {

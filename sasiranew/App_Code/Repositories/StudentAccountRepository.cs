@@ -1,9 +1,9 @@
 using System;
 using System.Data.SqlClient;
-using sasiranew.App_Code.Helpers;
-using sasiranew.App_Code.Models;
+using sasiranew.Helpers;
+using sasiranew.Models;
 
-namespace sasiranew.App_Code.Repositories
+namespace sasiranew.Repositories
 {
     public sealed class StudentAccountRepository
     {

@@ -1,9 +1,9 @@
 using System;
 using System.Net.Mail;
-using sasiranew.App_Code.Models;
-using sasiranew.App_Code.Repositories;
+using sasiranew.Models;
+using sasiranew.Repositories;
 
-namespace sasiranew.App_Code.Services
+namespace sasiranew.Services
 {
     public sealed class StudentAccountService
     {

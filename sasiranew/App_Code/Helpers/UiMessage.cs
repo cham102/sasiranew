@@ -1,7 +1,7 @@
 using System;
 using System.Web;
 
-namespace sasiranew.App_Code.Helpers
+namespace sasiranew.Helpers
 {
     public static class UiMessage
     {

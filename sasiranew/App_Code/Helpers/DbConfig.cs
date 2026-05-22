@@ -1,7 +1,7 @@
 using System;
 using System.Configuration;
 
-namespace sasiranew.App_Code.Helpers
+namespace sasiranew.Helpers
 {
     public static class DbConfig
     {

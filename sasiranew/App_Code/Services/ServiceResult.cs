@@ -1,6 +1,6 @@
 using System;
 
-namespace sasiranew.App_Code.Services
+namespace sasiranew.Services
 {
     public sealed class ServiceResult
     {

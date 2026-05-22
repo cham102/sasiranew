@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace sasiranew.App_Code.Helpers
+namespace sasiranew.Helpers
 {
     internal static class SqlHelper
     {
