@@ -38,7 +38,7 @@ namespace sasiranew
                     return;
                 }
 
-                Response.Write(UiMessage.ToJsAlert("register is successfull"));
+                Response.Write(UiMessage.ToJsAlert("register is successful"));
                 Response.Redirect("studentlogin.aspx");
             }
             catch
