@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Models;
-using Services;
+using sasiranew.Helpers;
+using sasiranew.Models;
+using sasiranew.Services;
 
 namespace sasiranew
 {
@@ -33,16 +34,16 @@ namespace sasiranew
 
                 if (!result.Succeeded)
                 {
-                    Response.Write("<script>alert('" + result.ErrorMessage + "');</script>");
+                    Response.Write(UiMessage.ToJsAlert(result.ErrorMessage));
                     return;
                 }
 
-                Response.Write("<script>alert('register is successfull');</script>");
+                Response.Write(UiMessage.ToJsAlert("register is successful"));
                 Response.Redirect("studentlogin.aspx");
             }
             catch
             {
-                Response.Write("<script>alert('Something went wrong while registering.');</script>");
+                Response.Write(UiMessage.ToJsAlert("Something went wrong while registering."));
             }
 
         }

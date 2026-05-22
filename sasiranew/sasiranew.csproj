@@ -2290,13 +2290,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Helpers\DbConfig.cs" />
-    <Content Include="App_Code\Helpers\SqlHelper.cs" />
-    <Content Include="App_Code\Models\StudentAccount.cs" />
-    <Content Include="App_Code\Repositories\StudentAccountRepository.cs" />
-    <Content Include="App_Code\Services\ServiceResult.cs" />
-    <Content Include="App_Code\Services\StudentAccountService.cs" />
-    <Content Include="App_Code\Helpers\UiMessage.cs" />
+    <Compile Include="App_Code\Helpers\DbConfig.cs" />
+    <Compile Include="App_Code\Helpers\SqlHelper.cs" />
+    <Compile Include="App_Code\Models\StudentAccount.cs" />
+    <Compile Include="App_Code\Repositories\StudentAccountRepository.cs" />
+    <Compile Include="App_Code\Services\ServiceResult.cs" />
+    <Compile Include="App_Code\Services\StudentAccountService.cs" />
+    <Compile Include="App_Code\Helpers\UiMessage.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
